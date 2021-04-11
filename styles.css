@@ -7,11 +7,17 @@
     font-family: 'Rubik', sans-serif;
 }
 
+body{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 div.nav-bar {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 6rem;
-    width: 100vw;
+    padding: 1rem 3rem;
+    width: 100%;
     background: #304353;
 }
 
@@ -22,12 +28,13 @@ div.logo {
 
 ul.nav-links {
     display: flex;
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
 }
 
 ul li {
-    margin: 0 2vw;
+    margin: 0 0 0 1.5em;
     list-style: none;
     font-size: 1.1rem;
 }
@@ -41,8 +48,21 @@ ul li a {
 ul li a:hover {
     color: #304353;
     background: #fff;
-    padding: 0.5rem;
+    padding: 0.4rem;
 }
+
+label#checkbtn{
+    width: 7%;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+  display: none;
+}
+
+
 
 div.hero-section {
     background: #304353;
@@ -66,7 +86,7 @@ div.hero-content-heading p {
     padding-top: 0.7rem;
     color: #88949B;
     font-size: 1rem;
-    letter-spacing: 2px;
+    letter-spacing: 0.2em;
     font-weight: 300;
 }
 
@@ -93,15 +113,15 @@ div.hero-background {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 div.background {
     background: #fff;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
-    padding: 15px 40px;
-    width: 550px;
-    height: 220px;
-    position: relative;
+    padding: 1em 2em;
+    width: 100%;
+    height: auto;
 }
 
 div.background h4 {
@@ -115,17 +135,18 @@ div.background h4 {
 div.background p {
     color: #A6A5AA;
     padding-left: 2rem;
+    padding-bottom: 1rem;
     font-size: 0.8rem;
     letter-spacing: 2px;
 }
 
 div.hero-background-pos {
     position: absolute;
-    right: 0px;
-    left: 66%;
+    right: 20%;
+    top: 33%;
     background: #fff;
-    width: 140px;
-    height: 140px;
+    width: 10%;
+    height: 15%;
     border-radius: 50%;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
 }
@@ -155,30 +176,32 @@ div.snapshot-box {
     justify-content: center;
     align-items: center;
     background: #f0f0f0;
-    padding: 4rem 6rem;
+    padding: 4rem 4rem;
 }
 
 div.snapshot-box-content {
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
 }
 
 div.box1 {
     background: #fff;
-    padding: 10px 20px;
-    width: 220px;
-    height: 230px;
-    margin: 10px;
+    padding: 2em 3em;
+    width: 30%;
+    height: auto;
+    margin: 3em 0;
     border-radius: 2px;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
 }
 
 div.box3 {
     background: #304353;
-    padding: 10px 20px;
-    width: 220px;
-    height: 230px;
-    margin: 10px;
+    padding: 2em 3em;
+    width: 30%;
+    height: auto;
+    margin: 3em 0;
     border-radius: 2px;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
 }
@@ -193,12 +216,12 @@ div.box3 h5 {
 div.circle {
     display: flex;
     margin: 0 auto;
-    width: 90px;
-    height: 90px;
+    width: 50%;
+    height: 17vh;
     border-radius: 50%;
     background: #bcc3c7;
     margin-top: 2rem;
-    
+
 }
 
 div.box1 h5 {
@@ -211,10 +234,13 @@ div.box1 h5 {
 div.gallery-section {
     background: #fff;
     padding: 4rem;
+    width: 100%
 }
 
 div.gallery-content {
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 div.gallery-content h4 {
@@ -233,18 +259,26 @@ div.gallery-content p {
 
 div.gallery-img {
    display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
+   justify-content: space-around;
+   width: 100%;
+   margin: 0 auto;
    padding-top: 3rem;
 }
 
+body > div.gallery-section > div.gallery-img > div:nth-child(1),
+body > div.gallery-section > div.gallery-img > div:nth-child(2){
+  margin: 0 auto;
+}
+
+
+
 div.img {
-    margin: 10px;
+    margin: 3em auto;
+    width: 90%;
 }
 
 div.img img {
-    width: 250px;
-    height: 180px;
+    width: 100%;
 }
 
 div.footer {
@@ -344,4 +378,189 @@ div.footer h6 {
     color: #88949B;
     font-size: 1rem;
     padding-top: 6rem;
+}
+
+@media screen and (max-width: 800px){
+
+      div.background {
+          padding: 0.5em 1em;
+          width: 100%;
+      }
+
+      div.hero-background-pos {
+          right: 24%;
+          top: 32%;
+          width: 8%;
+          height: 13%;
+      }
+
+}
+
+@media screen and (max-width: 690px){
+  div.nav-bar {
+      display: flex;
+      justify-content: center;
+      padding: 2rem 3rem;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  div.logo {
+    text-align: center;
+      font-size: 1.7rem;
+      margin: 0 1em 0 1em;
+  }
+
+      ul.nav-links {
+          background: pink;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          margin: 0;
+          padding: 0;
+          position: fixed;
+          top: 25%;
+          right: 100%;
+          transition: all 1s;
+          height: 70vh;
+  }
+
+  #check:checked ~ ul{
+    right: 35%;
+  }
+
+  label#checkbtn{
+      width: 7%;
+      float: right;
+      cursor: pointer;
+      display: block;
+  }
+
+  ul li {
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      margin: 1em 0;
+  }
+
+  ul li a {
+      width: 100%;
+      padding: .5em 3em;
+  }
+
+  ul li a:hover {
+      padding: .5em 3em;
+  }
+
+
+
+  div.hero-section {
+      background: #304353;
+      padding: 2rem;
+  }
+
+  div.hero-content-heading h3 {
+      font-size: 1.6rem;
+  }
+
+  div.hero-content-heading p {
+      font-size: .9rem;
+      max-width: 300px;
+      margin: 0 auto;
+  }
+
+
+  div.hero-background {
+      padding: 2rem;
+  }
+
+  div.background h4 {
+      padding: 1.5rem;
+      text-align: center;
+  }
+
+  div.background p {
+      padding: 0;
+      text-align: center;
+  }
+
+  div.hero-background-pos {
+      display: none;
+  }
+
+
+
+  div.snapshot-team p {
+      color: #A6A5AA;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      padding: 0.8rem .2rem 0 .2rem;
+  }
+
+  div.snapshot-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f0f0f0;
+      padding: 2rem 2rem;
+  }
+
+  div.snapshot-box-content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+      width: 100%;
+  }
+
+  div.box1, div.box3 {
+      padding: .5em 1em;
+      width: 50%;
+      height: auto;
+      margin: 3em auto;
+
+
+  }
+
+
+  div.gallery-section {
+      background: #fff;
+      padding: 1rem;
+      width: 100%
+  }
+
+  div.gallery-img {
+     display: flex;
+     justify-items: center;
+     flex-direction: column;
+     width: 100%;
+     margin: 0 auto;
+     padding-top: 1rem;
+  }
+
+  body > div.gallery-section > div.gallery-img > div:nth-child(1),
+  body > div.gallery-section > div.gallery-img > div:nth-child(2){
+    margin: 0 auto;
+  }
+
+
+  div.img {
+      margin: 3em auto;
+      width: 70%;
+  }
+
+
+div.footer-input{
+  flex-direction: column;
+  padding-top: .4rem;
+}
+
+  input[type="text"], input[type="email"]{
+    width: 100%;
+    margin: .5em 0;
+  }
+
+  textarea{
+    width: 100%
+  }
 }
